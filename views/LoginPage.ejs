@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=#, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header><h1>Login to your messenger here!</h1></header>
+    <form action="/Login" method="POST">
+    <h4>Enter username</h2>
+    <input type="username" name="username" placeholder="Enter username"><br>
+    <h4>Enter password</h4>
+    <input type="password" name="password" placeholder="Enter password"><hr>
+    <input type="submit" value="Login">
+    </form><br>
+    <form action="Login/new" method="get">
+    <input type="submit"value="Register here!">
+    </form>
+    <%- include('./partials/footer.ejs') %>
+</div>
+    
+</body>
+</html>

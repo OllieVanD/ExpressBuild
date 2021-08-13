@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="side-bar" class="w3-sidebar w3-bar-block" style="width:25%">
+        
+        <h3>Select Person to message</h3>
+        <% Users.map(user => { %>
+            <a href="/sendMessage/<%=`${currentUser.id}/${user.id} `%>"> <%= user.username %></a><br>
+        <%}) %>
+      </div>
+    <div id="side-bar">
+        <p>testText</p>
+    </div>
+    <div class="wrapper">
+        <%- include('./partials/Header.ejs') %>
+        <h4>Here are your messages: <%= currentUser.username %></h1> <hr>
+        <% Messages.map(message => {  %>
+            <div style="background-color: aqua;">
+                <strong><p><%=message.Login.username%></p></strong>
+            <p> <%= message.Text %></p> 
+        </div>
+        <% }) %>
+    <%- include('./partials/footer.ejs') %>
+</div>
+</body>
+</html>
